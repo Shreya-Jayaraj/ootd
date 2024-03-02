@@ -8,7 +8,7 @@ class Product(models.Model):
     p_qty = models.IntegerField()
     p_desc = models.CharField(max_length=200)
     p_price = models.IntegerField()
-    poster = models.ImageField(upload_to='images/',null=True)
+    p_image = models.ImageField(upload_to='images/',null=True)
     category = models.ForeignKey(Category,related_name = 'category', null = True, on_delete=models.SET_NULL)
 
     def __str__(self):
